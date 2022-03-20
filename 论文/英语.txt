@@ -1,0 +1,7 @@
+crop 剪裁
+convergence 收敛
+identity mapping
+fine-tune 微调
+backpropagation 反向传播
+vanishing/exploding gradients   梯度消失/爆炸
+plain 普通
