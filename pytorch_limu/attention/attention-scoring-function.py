@@ -43,6 +43,10 @@ class AdditiveAttention(nn.Module):
         features = torch.tanh(features)
         # self.w_v仅有一个输出，因此从形状中移除最后那个维度。
         # scores的形状：(batch_size，查询的个数，“键-值”对的个数)
+        # print("------------------------")
+        # print(queries.unsqueeze(2).shape)
+        # print(keys.unsqueeze(1).shape)
+        # print(self.w_v(features).shape)
         scores = self.w_v(features).squeeze(-1)
         self.attention_weights = masked_softmax(scores, valid_lens)
         # values的形状：(batch_size，“键－值”对的个数，值的维度)

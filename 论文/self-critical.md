@@ -1,0 +1,1 @@
+加了强化学习减少lstm一个一个产生词带来的误差累积exposure bias

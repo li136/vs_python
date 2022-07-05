@@ -8,6 +8,11 @@ from d2l import torch as d2l
 batch_size, num_steps = 32, 35
 train_iter, vocab = d2l.load_data_time_machine(batch_size, num_steps)
 
+# for X, Y in train_iter:
+#     print(X.shape,Y.shape)
+# print(len(vocab))
+
+
 print(F.one_hot(torch.tensor([0, 2]), len(vocab)))
 
 X = torch.arange(10).reshape((2, 5))
