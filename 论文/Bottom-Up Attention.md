@@ -1,6 +1,9 @@
 - 将 top-down attention 和 bottom-up attention 结合
 - 通过 Faster RCNN（backbone：ResNet-101) 来产生这样的视觉特征 V，将Faster RCNN检测的结果经过非最大抑制和分类得分阈值选出一些显著图像区域
 - 记输入的图片为P，那么图片理解和 VQA 模型的输入都是一个大小为k的V集合{k1~kv}。每个 image feature 编码了一个显著图像区域。每一个框能对应一个类别。将vi和从 ground truth object class 学习到的一个 embedding 结合在一起，然后将它们送入额外的一个属性 softmax 分类器，以此来获得区域对应的属性。
+- in captioning and VQA we utilize only the feature vectors – not the predicted labels.
+- select all regions where any class detection probability exceeds a confidence threshold. 
+
 - image caption
 
     第一个LSTM层描述为top-down视觉注意模型，将第二个LSTM层描述为语言模型。Attention LSTM的输入由Language LSTM的前一次输出、平均池化特征以及之前生成的单词的编码组成
