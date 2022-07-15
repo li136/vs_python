@@ -3,10 +3,13 @@ import argparse
 def f1():
     parser = argparse.ArgumentParser(description='test')
     parser.add_argument('--addresses',default="sipingroad", help = "The path of address")
-    # parser.add_argument('--RUN', dest='RUN_MODE',
-    #                     choices=['train', 'val', 'test'],
-    #                     help='{train, val, test}',
-    #                     type=str, required=True)
+
+    parser.add_argument('--test',default="qwe", help = "The path of address",dest='asd')
+
+    parser.add_argument('--RUN', dest='RUN_MODE',
+                        choices=['train', 'val', 'test'],
+                        help='{train, val, test}',
+                        type=str, required=True)
 
     # parser.add_argument('--MODEL', dest='MODEL',
     #                     choices=['small', 'large'],
@@ -18,3 +21,5 @@ def f1():
 
 args=f1()
 print(args.addresses)
+print(args.asd)
+print(args.RUN_MODE)
