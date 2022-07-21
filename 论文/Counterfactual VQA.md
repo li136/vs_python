@@ -23,4 +23,4 @@ Debiasing Strategies in VQA：
 
 strengthening visual grounding, weakening language prior, and implicit/explicit data argumentation.
 ```
-![1](img\CFVQA.png)
+![1](笔记整理\img\CFVQA.png)
