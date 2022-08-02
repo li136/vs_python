@@ -1,2 +1,1 @@
-¸²¸Çtest
-¸½¼Ótest
+git push -u https://github.com/li136/vs_python.git master -f
